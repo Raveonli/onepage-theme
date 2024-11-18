@@ -1,0 +1,28 @@
+@media (max-width: 768px) {
+  .slider-container {
+    display: none; /* Masque le slider sur les petits écrans */
+  }
+
+  .partner-carousel {
+    flex-direction: column;
+    max-width: 100%;
+    gap: 1rem; /* Réduire l'espace entre les logos */
+    padding: 10px;
+    margin: 0.5rem;
+  }
+
+  .slider-logo img {
+    width: 8vh; /* Réduire la taille des images */
+    max-height: 8vh;
+    padding: 0.5vh;
+  }
+
+  .image-gallery {
+    width: calc(50% - 2em); /* Deux images par ligne */
+  }
+  .contact {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,171 @@
+@use "variables" as *;
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  line-height: 1.5;
+  color: $color-primary;
+  background-color: $color-primary;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: $color-primary;
+  color: fontnav;
+  height: 3.5rem;
+}
+
+header h1 {
+  margin-right: auto;
+  font-size: $font-size-h1;
+  color: $color-fontnav;
+  margin-left: 2rem;
+}
+
+/* Style de la navigation  */
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: $color-fontnav;
+  text-decoration: none;
+  font-size: $font-size-h2;
+  padding: 5px 10px;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: $color-secondary;
+  border-radius: 5px;
+}
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-primary;
+  padding: 15px;
+}
+
+.main-menu h1 {
+  font-family: $font-primary;
+  font-size: $font-size-h1;
+  color: $color-fontnav;
+}
+
+.main-menu ul {
+  list-style: none;
+  display: flex;
+}
+
+.main-menu ul li {
+  margin: 0 10px;
+}
+
+.main-menu ul li a {
+  text-decoration: none;
+  color: $color-fontnav;
+  font-family: $font-secondary;
+  font-size: $font-size-base;
+}
+
+#hamburger {
+  display: none;
+}
+
+/* Cacher le menu sur mobile */
+/* Styles pour les écrans mobiles */
+@media (max-width: 768px) {
+  header {
+    background-color: $color-secondary;
+  }
+  .main-menu ul {
+    display: none; /* Cacher le menu par défaut */
+    width: 100%;
+    flex-direction: column;
+    background-color: $color-secondary;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 60px 20px;
+    box-sizing: border-box;
+  }
+  .main-menu {
+    background-color: $color-secondary;
+  }
+  .main-menu ul li {
+    margin: 5px 0;
+    color: $color-fontnav;
+  }
+
+  /* Style de l'icône hamburger */
+  #hamburger {
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: $color-fontnav;
+    font-size: 30px;
+    cursor: pointer;
+    position: relative; /* Pour qu'il reste bien en place */
+    z-index: 1000; /* Assurez-vous que l'icône reste au-dessus du menu */
+  }
+
+  /* Lorsque le menu est actif, on affiche le menu */
+  .main-menu ul.active {
+    display: flex; /* Affiche le menu lorsqu'il est actif */
+  }
+
+  .main-menu ul {
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%); /* Commence hors de la vue */
+  }
+
+  .main-menu ul.active {
+    transform: translateY(0); /* Affiche le menu */
+  }
+}
+
+/* Style de la section footer */
+.site-footer {
+  background-color: $color-fontnav;
+  color: $color-font;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.site-info {
+  font-size: 14px;
+  color: $color-primary;
+}
+
+.site-info a {
+  color: $color-font;
+  text-decoration: underline;
+}
+
+.site-info a:hover {
+  color: #ddd;
+}
+
+.one-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: $color-fontnav;
+}
+.one-page p {
+  color: $color-fontnav;
+  max-width: 90lvh;
+}

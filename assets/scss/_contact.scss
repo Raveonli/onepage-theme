@@ -1,0 +1,85 @@
+@use "variables" as *;
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: $color-secondary;
+  padding: 3rem;
+}
+.contact-container {
+  max-width: 190vh;
+  margin: 0 auto;
+  margin-bottom: 2vh;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  color: $color-fontnav;
+}
+
+.gform_wrapper {
+  font-size: $font-size-base;
+  font-family: $font-primary;
+  background-color: $color-background;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gform_title {
+  font-size: $font-size-h1;
+  color: $color-primary;
+  margin-bottom: 20px;
+}
+
+.gform_description {
+  font-size: $font-size-base;
+  color: $color-font;
+  margin-bottom: 20px;
+}
+
+.gfield_label {
+  font-size: $font-size-base;
+  color: $color-primary;
+  margin-bottom: 10px;
+}
+
+.ginput_container {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  color: $color-font;
+  background-color: #fff;
+  border: 1px solid $color-primary;
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  font-family: $font-secondary;
+  font-size: $font-size-base;
+  color: $color-fontnav;
+  background-color: $color-primary;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: $color-secondary;
+}

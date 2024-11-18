@@ -1,0 +1,10 @@
+<?php get_header(); ?>
+<?ph
+if(get_field('field_name'))
+{
+    echo '<p>' . get_field('field_name') . '</p>';
+}
+
+?>
+
+<?php get_footer(); ?>
