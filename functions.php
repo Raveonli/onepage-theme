@@ -132,7 +132,7 @@ function display_galerie_acf($field_name)
 }
 
 
-function test2()
+function test3()
 {
   echo 'test';
 }
