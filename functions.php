@@ -131,4 +131,9 @@ function display_galerie_acf($field_name)
   }
 }
 
-// test du hook 12
+// test du hook 13
+
+function test()
+{
+  echo 'test';
+}
